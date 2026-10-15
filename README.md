@@ -6,28 +6,52 @@
 
 ---
 
-## 🧠 Why ScholarMatch? (The Student Problem Solver)
-International students (especially from regions like Pakistan) face massive friction finding fully funded scholarships due to fragmented data, complex eligibility criteria, and generic search engines. 
-ScholarMatch solves this by acting as an **intelligent companion**—matching a student's exact academic profile, GPA, and background against global opportunities using deterministic AI logic, and guiding them step-by-step from discovery to application submission.
+## 🧠 Mission & Platform Overview
+International students face massive friction finding fully funded scholarships due to fragmented data, complex eligibility criteria, and generic search engines. ScholarMatch solves this by acting as an **intelligent companion**—matching a student's exact academic profile, GPA, and background against global opportunities using deterministic AI logic, and guiding them step-by-step from discovery to application submission.
+
+**Core Lifecycle Loop:**  
+`Profile` → `Match` → `Understand` → `Prepare` → `Apply` → `Track` → `Return`
 
 ---
 
-## ✨ Core AI & Intelligent Features
+## 🏗️ Dual-Sided Platform Architecture
 
-- **🤖 AI-Driven Matching Engine:** Goes beyond simple keyword filters. It runs a weighted multi-dimensional scoring matrix (Academic GPA, Field of Study, Nationality eligibility, and Language requirements) to calculate precise match percentages.
-- **💬 ScholarMatch AI Assistant:** Natural language query system where students can type phrases like *"I have a 3.4 GPA in Computer Science and want fully funded Master's scholarships in Europe,"* and the AI instantly categorizes and filters the top matching opportunities.
-- **🫧 Interactive Bubble & Glow UI Effects:** Features dynamic, responsive micro-animations and glowing match-score visualizations (e.g., live 96% match indicators) providing immediate, satisfying visual feedback.
-- **🎯 Student Application Journey Tracker:** Breaks down the overwhelming application process into 7 clear, manageable interactive milestones (Eligibility Check → Document Prep → Submission).
-- **🔒 Secure Authentication & Sync:** Robust student accounts powered by Supabase Auth with automated profile synchronization and Row Level Security (RLS).
+- **Public Side (Cinematic Discovery Engine):**
+  - High-performance exploration hub with advanced filtering systems (Fully Funded, Undergraduate, Masters, PhD, Country-specific).
+  - Modern, responsive landing experience with live interactive elements.
+- **Student Side (`/dashboard` & Workspace):**
+  - Dedicated student control centers: `/dashboard`, `/matches`, `/applications`, `/documents`, `/saved`, and `/ai-assistant`.
 
 ---
 
-## 🛠️ Tech Stack & AI Architecture
+## 🤖 The Intelligence Core (Matching Engine v1)
 
-- **Frontend:** Next.js (App Router), React, Tailwind CSS, Framer Motion (Glassmorphic UI with custom bubble/glow effects).
-- **Backend & Database:** Supabase (PostgreSQL), Row Level Security, Automated DB Triggers.
-- **Intelligence & Matching Layer:** Custom weighted scoring pipeline designed for high-precision scholarship filtering.
-- **Deployment:** Vercel Edge Serverless Architecture.
+Going far beyond simple keyword filters, ScholarMatch runs a precision weighted multi-dimensional scoring matrix:
+- **Field of Study:** 25%
+- **Degree Level:** 20%
+- **Academic / GPA:** 20%
+- **Nationality / Eligibility Gate:** 15%
+- **Language Requirements (IELTS/TOEFL):** 10%
+- **Experience & Projects:** 5%
+- **Student Preferences:** 5%
+
+**Explainable AI Matching:** Provides clear breakdown metrics indicating **"Why you match"** vs **"One thing to improve"** (e.g., live 96% match indicators with interactive bubble and glow effects).
+
+---
+
+## 🛠️ Technical & Backend Stack
+
+- **Frontend:** Next.js (App Router), React, TypeScript, Tailwind CSS, Framer Motion (Glassmorphic UI with custom bubble/glow micro-interactions).
+- **Backend & Database:** Supabase (Managed PostgreSQL), Row Level Security (RLS) policies, and automated database triggers for user profile synchronization.
+- **Security & Trust:** Strict session handling via Supabase Auth, transparent eligibility disclaimers, and data verification workflows.
+
+---
+
+## 🎯 Application Intelligence & Workflow
+
+- **Step-by-Step Journey Tracker:** Breaks down the overwhelming application process into 7 clear milestones:
+  `01 Check Eligibility` → `02 Prepare Documents` → `03 Create Account` → `04 Complete Application` → `05 Upload Documents` → `06 Review` → `07 Submit`.
+- **Interactive Document Checklists:** Built-in tracking for passports, transcripts, CVs, and motivation/recommendation letters.
 
 ---
 
@@ -42,4 +66,4 @@ ScholarMatch solves this by acting as an **intelligent companion**—matching a 
 ---
 
 ## 🛡️ Repository Notice & Academic Integrity
-This repository serves as the public architectural showcase and documentation hub for **ScholarMatch**. The core source code and proprietary AI matching pipelines remain hosted in a private repository for security and intellectual property protection.
+This repository serves as the public architectural showcase and documentation hub for **ScholarMatch**. The core source code, proprietary database schemas, and AI matching pipelines remain hosted in a private repository for security and intellectual property protection.
